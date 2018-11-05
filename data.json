@@ -20,4 +20,4 @@ db.record.insert(
 ]);
 
 Working: The second query will automatically create record collection and insert data in it. 
-If record collection is already created in it then it will enter the data.ss
+If record collection is already created in it then it will enter the data.
