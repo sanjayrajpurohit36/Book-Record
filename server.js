@@ -7,11 +7,11 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-// var MongoClient = require('mongodb').MongoClient;
-// var Bear     = require('./app/models/bear');
-// var mongoose = require('mongoose');
-var URL = 'mongodb://localhost:27017/book';
-// mongoose.connect(URL);	//connect mongoose with this url
+var MongoClient = require('mongodb').MongoClient;
+var Schema     = require('./app/models/index');
+var mongoose = require('mongoose');
+var URL = 'mongodb://localhost:27017/books'   ;
+mongoose.connect(URL);	//connect mongoose with this url
 var morgan = require('morgan');
 
 // configure app to use bodyParser()
@@ -25,10 +25,11 @@ var port = process.env.PORT || 8000;        // set our port
 var router = express.Router();              // get an instance of the express Router
 // assert = require('assert');
 
-// MongoClient.connect(URL, function(err, db) {
-// 	if (err) throw err;
-// 	require('./app/routes/index')(router, db);
-// })	
+MongoClient.connect(URL, function(err, db) {
+    if (err) throw err;
+    // console.log(db.db("books").collection('records').find());
+	require('./app/routes/index')(router, db);
+})	
 
 app.use('/api', router);
 

@@ -1,0 +1,23 @@
+1. use db <db name>
+2. Query to insert multiple data in db
+db.record.insert(
+[
+    {
+        "book" : "Two States",
+        "author" : "Chetan Bhagat",
+        "read" : 0
+    },
+    {
+        "book" : "Harry Potter",
+        "author" : "J.K. Rowling",
+        "read" : 1
+    },
+    {
+        "book" : "Wings of Fire",
+        "author" : "APJ ABD",
+        "read" : 0
+    }
+]);
+
+Working: The second query will automatically create record collection and insert data in it. 
+If record collection is already created in it then it will enter the data.ss

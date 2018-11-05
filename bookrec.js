@@ -17,8 +17,8 @@ var todo = new mongoose.Schema({
 },
 
   {
-    collection: 'todos'
+    collection: 'records'
   }
 )
 
-module.exports = mongoose.model('Todo', todo)
+module.exports = mongoose.model('Rec', records)
