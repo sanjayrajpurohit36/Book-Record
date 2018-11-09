@@ -1,25 +1,40 @@
 module.exports = function(app, db) {
-	/*
-	Test route to make sure everything is working (accessed at GET http://localhost:8080/api)	
-	A simple get route
-	*/
-	app.get('/', function(req, res) {
-		res.json({ message: 'This is a get route' });   
-    });
-    
+    const Books = require('../controllers/book.controller.js'); 
     /*
-    URL: GET http://localhost:8080/api/show	
-    desc: A show route to get all the data from books db and record collection 
-    Auhor: Sanjay Rajpurohit
-	*/
-    app.get('/show', function(req, res) {
-        var dbo = db.db("books");
-        var test = dbo.collection('record');        
-        test.find().toArray().then(function (result){
-            res.json({
-                message : 'Success', 
-                data : result,
-            })    
-        });        
-    })
+	Test route to make sure everything is working (accessed at GET http://localhost:8080/api/test)	
+	A simple get route
+    */
+	app.get('/test', Books.test);
+    
+    /** 
+    *  @URL: GET http://localhost:8080/api/show	
+    *  @desc: A show route to get all the data from books db and record collection 
+    *  @Auhor: Sanjay Rajpurohit
+    *  @Return: json responce
+    */
+    app.get('/show', Books.show);
+
+    /** 
+    *  @URL: POST http://localhost:8080/api/post	
+    *  @desc: A post route to add books in record collection 
+    *  @Auhor: Sanjay Rajpurohit
+    *  @Return: json responce
+    */
+    app.post('/post', Books.create);
+
+    /** 
+    *  @URL: POST http://localhost:8080/api/bookdel/{id}	
+    *  @desc: A post route to delete books from record collection 
+    *  @Auhor: Sanjay Rajpurohit
+    *  @Return: json responce
+    */
+    app.delete('/bookdel/:id', Books.delete);   
+
+    /** 
+    *  @URL: POST http://localhost:8080/api/bookupdate/{id}	
+    *  @desc: A post route to update a particular record from record collection 
+    *  @Auhor: Sanjay Rajpurohit
+    *  @Return: json responce
+    */
+    app.put('/bookupdate/:id', Books.update);        
 }

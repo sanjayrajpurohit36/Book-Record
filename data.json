@@ -3,17 +3,17 @@
 db.record.insert(
 [
     {
-        "book" : "Two States",
+        "title" : "Two States",
         "author" : "Chetan Bhagat",
         "read" : 0
     },
     {
-        "book" : "Harry Potter",
+        "title" : "Harry Potter",
         "author" : "J.K. Rowling",
         "read" : 1
     },
     {
-        "book" : "Wings of Fire",
+        "title" : "Wings of Fire",
         "author" : "APJ ABD",
         "read" : 0
     }
