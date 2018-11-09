@@ -2,7 +2,7 @@
 This is just a simple app which allows user to manage details of his/her books.
 Technology Stack Used: Node.js, Express.js, MongoDB, Vue.js.
 
-To start Node Server.
+#To start Node Server.
 # install dependencies
 npm install
 
@@ -15,9 +15,9 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+-------------------------------------------------------------
 
-To start Vue Server.
-
+#To start Vue Server.
 # install dependencies(vue)
 Note: Go to app/view folder and then type
 npm install
