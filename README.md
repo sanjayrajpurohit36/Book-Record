@@ -1,8 +1,8 @@
-#Book Reord App
+# Book Reord App
 This is just a simple app which allows user to manage details of his/her books.
 Technology Stack Used: Node.js, Express.js, MongoDB, Vue.js.
 
-#To start Node Server.
+# To start Node Server.
 # install dependencies
 npm install
 
@@ -17,7 +17,7 @@ npm run build
 npm run build --report
 -------------------------------------------------------------
 
-#To start Vue Server.
+# To start Vue Server.
 # install dependencies(vue)
 Note: Go to app/view folder and then type
 npm install
@@ -38,4 +38,4 @@ http://localhost:8080/
 
 #Author
 Sanjay Rajpurohit
-E-Mail: sanjayrajpurohit36@gmai.com
+E-Mail: sanjayrajpurohit36@gmail.com
