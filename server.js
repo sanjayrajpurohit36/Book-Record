@@ -30,7 +30,7 @@ mongoose.connect(dbConfig.URL);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use(morgan(':url :response-time ms'));				// Using morgan to check request time
+app.use(morgan(':url :response-time ms'));				// Using morgan to check request time
 var port = process.env.PORT || 8000;        // set our port
 // ROUTES FOR OUR API
 // =============================================================================
