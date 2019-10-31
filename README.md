@@ -1,5 +1,5 @@
 # Book Record App
-This is just a simple app which allows user to manage details of his/her books.
+This is a app which allows user to manage details of his/her books.
 Technology Stack Used: Node.js, Express.js, MongoDB, Vue.js.
 
 # To start Node Server.
